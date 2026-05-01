@@ -20,6 +20,7 @@ Plataforma utilizada para almacenar el repositorio del proyecto y gestionar el d
 Software de diseño vectorial utilizado para la creación de logos, mockups e interfaces visuales.
 
 1.1. Captura de requisitos
+
 1.1.1. Requisitos funcionales
 Registro e inicio de sesión:
  El sistema debe permitir a los usuarios registrarse e iniciar sesión mediante correo electrónico, Google o redes sociales.
@@ -51,6 +52,7 @@ Integración con API externa:
 Diagrama de casos de uso
 
 1.1.2. Requisitos no funcionales
+
 Compatibilidad:
  La aplicación debe ser compatible con dispositivos Android e iOS (Flutter multiplataforma).
 Rendimiento:
