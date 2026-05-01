@@ -75,3 +75,87 @@ Internacionalización:
 2. Diagrama de despliegue
 <img width="769" height="666" alt="image" src="https://github.com/user-attachments/assets/a34915e2-0de2-4344-9716-651c893ac8b5" />
 
+3. Diagrama de casos de uso
+<img width="732" height="640" alt="image" src="https://github.com/user-attachments/assets/e8cf9551-978f-4ba1-bb30-fb065a37beec" />
+
+4.  Descripción de casos de uso 
+
+CU-01: Registrar usuario 
+Actor: Usuario
+Descripción: Permite a un nuevo usuario crear una cuenta en la aplicación.
+Flujo principal:
+El usuario abre la app.
+Selecciona “Registrarse”.
+Ingresa correo, contraseña y datos básicos.
+El sistema valida los datos.
+El sistema crea la cuenta.
+Postcondición:
+ El usuario queda registrado y puede iniciar sesión.
+
+CU-02: Iniciar sesión 
+Actor: Usuario
+Descripción: Permite al usuario ingresar a la aplicación mediante sus credenciales para acceder a las funcionalidades de la app.
+
+Flujo principal:
+
+El usuario abre la aplicación.
+El usuario ingresa sus credenciales en los campos correspondientes.
+El usuario selecciona la opción de “Iniciar sesión”. 
+El sistema valida que los campos no estén vacíos. 
+El sistema verifica la validez de las credenciales en la base de datos.
+El sistema autentica al usuario.
+El sistema inicia la sesión del usuario.
+El usuario es redirigido a la pantalla principal.
+
+<img width="341" height="702" alt="image" src="https://github.com/user-attachments/assets/320b7bdc-444f-4f82-bd96-17fa0274d7db" />
+
+
+CU-03: Gestionar perfil
+Actor: Usuario
+Descripción: Permite al usuario visualizar y actualizar la información de su perfil en la aplicación, incluyendo foto, descripción de usuario, listas favoritas, etc.
+Entidades relacionadas: Usuario, Lista, Favoritos.
+Flujo principal:
+El usuario registrado accede a la sección “Perfil”
+El sistema muestra la información actual del perfil (foto, nombre de usuario, biografia)
+El usuario selecciona la opción “Editar perfil”
+Modifica uno o más campos (foto, biografía, etc.)
+El usuario guarda los cambios
+El sistema valida la información y actualiza los datos del usuario
+Se muestra el perfil actualizado
+Mockup asociados: Pantalla de perfil, pantalla de edición de perfil
+
+<img width="570" height="393" alt="image" src="https://github.com/user-attachments/assets/124ae173-f098-4603-ad14-7b2216f9663a" />
+
+CU-04: Calificar y reseñar película
+Actor: Usuario
+Descripción: Permite al usuario calificar y escribir una reseña sobre una película.
+Flujo principal:
+El usuario selecciona una película.
+Elige una calificación (1–5 estrellas).
+Escribe una reseña.
+El sistema guarda la información.
+Postcondición:
+ La calificación y reseña quedan registradas.
+
+<img width="555" height="544" alt="image" src="https://github.com/user-attachments/assets/72a8a3f8-7466-4923-96df-b4b8758ac2e3" />
+
+CU-05: Crear lista de películas
+Actor: Usuario
+Descripción: Permite al usuario crear listas personalizadas de películas.
+Flujo principal:
+El usuario accede a la sección de listas.
+Selecciona “Crear lista”.
+Ingresa nombre y descripción.
+Añade películas.
+El sistema guarda la lista.
+Postcondición:
+ La lista queda disponible en el perfil del usuario.
+
+<img width="581" height="379" alt="image" src="https://github.com/user-attachments/assets/e0a82296-1707-4e19-bc4a-8d5e2f66c3c6" /> <img width="181" height="318" alt="image" src="https://github.com/user-attachments/assets/11a2678c-3da7-4386-8cc3-e26730461b77" />
+
+
+
+
+
+
+
