@@ -157,6 +157,28 @@ Postcondición:
 
 
 
+CU-06: Buscar películas
+Actor: Usuario
+Descripción: Permite al usuario buscar películas dentro de la aplicación mediante criterios
+De Filtros: Título, Género, Año de estreno, Calificación
+De Ordenamiento: A → Z / Z → A , Más reciente / Más antiguo, Mayor a menor calificación / Menor a mayor calificación
+Flujo principal:
+El usuario accede a la sección de búsqueda
+El usuario ingresa un término de búsqueda y/o selecciona uno o más filtros disponibles.
+El usuario de manera opcional selecciona un criterio de ordenamiento
+El sistema valida que al menos un criterio de búsqueda o filtro haya sido ingresado
+El sistema consulta los datos disponibles a través de la API de películas.
+El sistema muestra una lista de resultados que coincidan con los criterios ingresados.
+El usuario visualiza los resultados obtenidos.
+Flujo alternativo: Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.
+Postcondición: El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles
+
+CU-07: Ver detalles de película
+Actor: Usuario
+Descripción:
+Flujo principal:
+
+
 
 
 
