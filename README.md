@@ -49,7 +49,6 @@ Modo offline básico:
 Integración con API externa:
  El sistema debe consumir una API de películas (como TMDB) para obtener información actualizada.
 
-Diagrama de casos de uso
 
 1.1.2. Requisitos no funcionales
 
