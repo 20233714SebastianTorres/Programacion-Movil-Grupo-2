@@ -92,6 +92,7 @@ El sistema valida los datos.
 El sistema crea la cuenta.
 Postcondición:
  El usuario queda registrado y puede iniciar sesión.
+ 
 <img width="269" height="541" alt="Image" src="https://github.com/user-attachments/assets/501fde2f-3332-4864-af2e-01cca57f96b5" />
 
 CU-02: Iniciar sesión 
@@ -173,10 +174,9 @@ El usuario visualiza los resultados obtenidos.
 Flujo alternativo: Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.
 Postcondición: El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles
 
-CU-07: Ver detalles de película
-Actor: Usuario
-Descripción:
-Flujo principal:
+<img width="602" height="433" alt="Image" src="https://github.com/user-attachments/assets/2decf29c-7d9b-425b-b8fc-05f9e6ec369f" />
+
+
 
 
 
