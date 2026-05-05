@@ -1,6 +1,6 @@
 1. Introducción y entorno de desarrollo
 
-Introducción
+
 Actualmente, las aplicaciones enfocadas en entretenimiento y redes sociales han tomado gran relevancia debido a la necesidad de los usuarios de compartir opiniones, descubrir contenido y registrar sus experiencias digitales. En el ámbito cinematográfico, muchas personas buscan plataformas donde puedan organizar las películas que han visto, calificarlas y encontrar recomendaciones según sus gustos personales.
 
 Por ello, el presente proyecto propone el desarrollo de una aplicación móvil inspirada en Letterboxd, utilizando el framework Flutter. La aplicación permitirá a los usuarios registrar películas vistas, asignar puntuaciones, escribir reseñas, crear listas personalizadas y administrar una watchlist de futuras películas por visualizar.
