@@ -6,242 +6,245 @@ Por ello, el presente proyecto propone el desarrollo de una aplicación móvil i
 
 El proyecto busca aplicar conceptos de desarrollo móvil multiplataforma, diseño de interfaces modernas y experiencia de usuario, integrando herramientas actuales utilizadas en la industria del software. Asimismo, se priorizará una interfaz intuitiva, visualmente atractiva y optimizada para dispositivos móviles Android.
 
-Herramientas utilizadas:
+## Herramientas utilizadas
 
--Flutter
-
+- **Flutter**  
 Framework principal utilizado para el desarrollo de la aplicación móvil multiplataforma mediante el lenguaje Dart.
 
--Visual Studio Code
-
+- **Visual Studio Code**  
 Editor de código empleado para la programación, depuración y administración del proyecto.
 
--Android Studio
-
+- **Android Studio**  
 Herramienta utilizada para el emulador Android y la configuración del SDK necesario para ejecutar aplicaciones móviles.
 
--GitHub
-
+- **GitHub**  
 Plataforma utilizada para almacenar el repositorio del proyecto y gestionar el desarrollo colaborativo.
 
--Inkscape
-
+- **Inkscape**  
 Software de diseño vectorial utilizado para la creación de logos, mockups e interfaces visuales.
 
-
+---
 
 ## 1.1. Captura de requisitos
 
-1.1.1. Requisitos funcionales
+### 1.1.1. Requisitos funcionales
 
-Registro e inicio de sesión:
+**Registro e inicio de sesión:**  
+El sistema debe permitir a los usuarios registrarse e iniciar sesión mediante correo electrónico, Google o redes sociales.
 
- El sistema debe permitir a los usuarios registrarse e iniciar sesión mediante correo electrónico, Google o redes sociales.
- 
-Gestión de perfil:
+**Gestión de perfil:**  
+El sistema debe permitir al usuario crear y editar su perfil, incluyendo foto, biografía y listas favoritas.
 
- El sistema debe permitir al usuario crear y editar su perfil, incluyendo foto, biografía y listas favoritas.
- 
-Búsqueda de películas:
+**Búsqueda de películas:**  
+El sistema debe permitir buscar películas por título, género, año o actores.
 
- El sistema debe permitir buscar películas por título, género, año o actores.
- 
-Visualización de detalles:
+**Visualización de detalles:**  
+El sistema debe mostrar información detallada de cada película (sinopsis, elenco, duración, calificación, tráiler).
 
- El sistema debe mostrar información detallada de cada película (sinopsis, elenco, duración, calificación, tráiler).
- 
-Registro de películas vistas:
+**Registro de películas vistas:**  
+El sistema debe permitir marcar películas como vistas y registrar la fecha de visualización.
 
- El sistema debe permitir marcar películas como vistas y registrar la fecha de visualización.
- 
-Calificación y reseñas:
+**Calificación y reseñas:**  
+El sistema debe permitir calificar películas (por ejemplo, de 1 a 5 estrellas) y escribir reseñas.
 
- El sistema debe permitir calificar películas (por ejemplo, de 1 a 5 estrellas) y escribir reseñas.
- 
-Creación de listas:
+**Creación de listas:**  
+El sistema debe permitir crear listas personalizadas (ej: “Mis favoritas”, “Películas por ver”).
 
- El sistema debe permitir crear listas personalizadas (ej: “Mis favoritas”, “Películas por ver”).
- 
-Sistema de recomendaciones:
+**Sistema de recomendaciones:**  
+El sistema debe sugerir películas basadas en el historial y preferencias del usuario.
 
- El sistema debe sugerir películas basadas en el historial y preferencias del usuario.
- 
-Seguimiento de usuarios:
+**Seguimiento de usuarios:**  
+El sistema debe permitir seguir a otros usuarios y ver su actividad.
 
- El sistema debe permitir seguir a otros usuarios y ver su actividad.
- 
-Feed de actividad:
+**Feed de actividad:**  
+El sistema debe mostrar un feed con las actividades recientes de usuarios seguidos (reseñas, listas, calificaciones).
 
- El sistema debe mostrar un feed con las actividades recientes de usuarios seguidos (reseñas, listas, calificaciones).
- 
-Notificaciones:
+**Notificaciones:**  
+El sistema debe enviar notificaciones sobre nuevos seguidores, comentarios o recomendaciones.
 
- El sistema debe enviar notificaciones sobre nuevos seguidores, comentarios o recomendaciones.
- 
-Modo offline básico:
+**Modo offline básico:**  
+El sistema debe permitir visualizar contenido previamente cargado sin conexión a internet.
 
- El sistema debe permitir visualizar contenido previamente cargado sin conexión a internet.
- 
-Integración con API externa:
+**Integración con API externa:**  
+El sistema debe consumir una API de películas (como TMDB) para obtener información actualizada.
 
- El sistema debe consumir una API de películas (como TMDB) para obtener información actualizada.
+---
 
+### 1.1.2. Requisitos no funcionales
 
-## 1.1.2. Requisitos no funcionales
+**Compatibilidad:**  
+La aplicación debe ser compatible con dispositivos Android e iOS (Flutter multiplataforma).
 
-Compatibilidad:
+**Rendimiento:**  
+La aplicación debe responder en menos de 2 segundos en operaciones comunes como búsqueda o carga de listas.
 
- La aplicación debe ser compatible con dispositivos Android e iOS (Flutter multiplataforma).
- 
-Rendimiento:
+**Escalabilidad:**  
+El sistema backend debe soportar un crecimiento progresivo de usuarios sin degradar el rendimiento.
 
- La aplicación debe responder en menos de 2 segundos en operaciones comunes como búsqueda o carga de listas.
- 
-Escalabilidad:
+**Seguridad:**  
+Los datos del usuario deben estar protegidos mediante autenticación segura y cifrado (HTTPS).
 
- El sistema backend debe soportar un crecimiento progresivo de usuarios sin degradar el rendimiento.
- 
-Seguridad:
- Los datos del usuario deben estar protegidos mediante autenticación segura y cifrado (HTTPS).
- 
-Usabilidad:
+**Usabilidad:**  
+La interfaz debe ser intuitiva, con navegación clara y diseño centrado en el usuario.
 
- La interfaz debe ser intuitiva, con navegación clara y diseño centrado en el usuario.
- 
-Disponibilidad:
+**Disponibilidad:**  
+El sistema debe garantizar una disponibilidad mínima del 99%.
 
- El sistema debe garantizar una disponibilidad mínima del 99%.
- 
-Mantenibilidad:
+**Mantenibilidad:**  
+El código debe seguir buenas prácticas (ej: arquitectura limpia, separación de capas) para facilitar cambios futuros.
 
- El código debe seguir buenas prácticas (ej: arquitectura limpia, separación de capas) para facilitar cambios futuros.
- 
-Portabilidad:
+**Portabilidad:**  
+La aplicación debe poder desplegarse fácilmente en diferentes dispositivos móviles.
 
- La aplicación debe poder desplegarse fácilmente en diferentes dispositivos móviles.
- 
-Consumo de recursos:
+**Consumo de recursos:**  
+La aplicación debe optimizar el uso de batería y memoria del dispositivo.
 
- La aplicación debe optimizar el uso de batería y memoria del dispositivo.
- 
-Internacionalización:
+**Internacionalización:**  
+La aplicación debe permitir múltiples idiomas (ej: español e inglés).
 
- La aplicación debe permitir múltiples idiomas (ej: español e inglés).
- 
-# 2. Diagrama de despliegue
-<img width="769" height="666" alt="image" src="https://github.com/user-attachments/assets/a34915e2-0de2-4344-9716-651c893ac8b5" />
+---
 
-# 3. Diagrama de casos de uso
-<img width="732" height="640" alt="image" src="https://github.com/user-attachments/assets/e8cf9551-978f-4ba1-bb30-fb065a37beec" />
+## 2. Diagrama de despliegue
 
-# 4.  Descripción de casos de uso 
-Diagrama de clases
+![Diagrama de despliegue](https://github.com/user-attachments/assets/a34915e2-0de2-4344-9716-651c893ac8b5)
 
-<img width="1184" height="843" alt="Image" src="https://github.com/user-attachments/assets/872a6c35-a6b8-4990-9e85-17db693f29c4" />
+---
 
-CU-01: Registrar usuario   
-Actor: Usuario  
-Descripción: Permite a un nuevo usuario crear una cuenta en la aplicación.  
-Flujo principal:  
-El usuario abre la app.  
-Selecciona “Registrarse”.  
-Ingresa correo, contraseña y datos básicos.  
-El sistema valida los datos.  
-El sistema crea la cuenta.  
-Postcondición:  
- El usuario queda registrado y puede iniciar sesión.  
- 
-<img width="269" height="541" alt="Image" src="https://github.com/user-attachments/assets/501fde2f-3332-4864-af2e-01cca57f96b5" />
+## 3. Diagrama de casos de uso
 
+![Diagrama de casos de uso](https://github.com/user-attachments/assets/e8cf9551-978f-4ba1-bb30-fb065a37beec)
 
-CU-02: Iniciar sesión 
-Actor: Usuario
-Descripción: Permite al usuario ingresar a la aplicación mediante sus credenciales para acceder a las funcionalidades de la app.
+---
 
-Flujo principal:
+## 4. Descripción de casos de uso
 
-El usuario abre la aplicación.  
-El usuario ingresa sus credenciales en los campos correspondientes.  
-El usuario selecciona la opción de “Iniciar sesión”.   
-El sistema valida que los campos no estén vacíos.   
-El sistema verifica la validez de las credenciales en la base de datos.  
-El sistema autentica al usuario.  
-El sistema inicia la sesión del usuario.  
-El usuario es redirigido a la pantalla principal.  
+### CU-01: Registrar usuario
 
-<img width="341" height="702" alt="image" src="https://github.com/user-attachments/assets/320b7bdc-444f-4f82-bd96-17fa0274d7db" />
+**Actor:** Usuario  
+**Descripción:** Permite a un nuevo usuario crear una cuenta en la aplicación.
 
+**Flujo principal:**
 
-CU-03: Gestionar perfil
-Actor: Usuario  
-Descripción: Permite al usuario visualizar y actualizar la información de su perfil en la aplicación, incluyendo foto, descripción de usuario, listas favoritas, etc.
-Entidades relacionadas: Usuario, Lista, Favoritos.  
-Flujo principal:  
-El usuario registrado accede a la sección “Perfil”  
-El sistema muestra la información actual del perfil (foto, nombre de usuario, biografia)  
-El usuario selecciona la opción “Editar perfil”  
-Modifica uno o más campos (foto, biografía, etc.)  
-El usuario guarda los cambios  
-El sistema valida la información y actualiza los datos del usuario  
-Se muestra el perfil actualizado  
-Mockup asociados: Pantalla de perfil, pantalla de edición de perfil  
+1. El usuario abre la app.  
+2. Selecciona “Registrarse”.  
+3. Ingresa correo, contraseña y datos básicos.  
+4. El sistema valida los datos.  
+5. El sistema crea la cuenta.  
 
-<img width="570" height="393" alt="image" src="https://github.com/user-attachments/assets/124ae173-f098-4603-ad14-7b2216f9663a" />
+**Postcondición:**  
+El usuario queda registrado y puede iniciar sesión.
 
-CU-04: Calificar y reseñar película  
-Actor: Usuario  
-Descripción: Permite al usuario calificar y escribir una reseña sobre una película.  
-Flujo principal:   
-El usuario selecciona una película.   
-Elige una calificación (1–5 estrellas).   
-Escribe una reseña.   
-El sistema guarda la información.   
-Postcondición:   
- La calificación y reseña quedan registradas.   
+![Registrar usuario](https://github.com/user-attachments/assets/501fde2f-3332-4864-af2e-01cca57f96b5)
 
-<img width="555" height="544" alt="image" src="https://github.com/user-attachments/assets/72a8a3f8-7466-4923-96df-b4b8758ac2e3" />
+---
 
-CU-05: Crear lista de películas  
-Actor: Usuario  
-Descripción: Permite al usuario crear listas personalizadas de películas.  
-Flujo principal:  
-El usuario accede a la sección de listas.  
-Selecciona “Crear lista”.  
-Ingresa nombre y descripción.  
-Añade películas.  
-El sistema guarda la lista.   
-Postcondición:   
- La lista queda disponible en el perfil del usuario.  
+### CU-02: Iniciar sesión
 
-<img width="581" height="379" alt="image" src="https://github.com/user-attachments/assets/e0a82296-1707-4e19-bc4a-8d5e2f66c3c6" /> <img width="181" height="318" alt="image" src="https://github.com/user-attachments/assets/11a2678c-3da7-4386-8cc3-e26730461b77" />
+**Actor:** Usuario  
+**Descripción:** Permite al usuario ingresar a la aplicación mediante sus credenciales para acceder a las funcionalidades de la app.
 
+**Flujo principal:**
 
-CU-06: Buscar películas  
-Actor: Usuario  
-Descripción:   
-Permite al usuario buscar películas dentro de la aplicación mediante criterios  
-De Filtros: Título, Género, Año de estreno, Calificación  
-De Ordenamiento: A → Z / Z → A , Más reciente / Más antiguo, Mayor a menor calificación / Menor a mayor calificación  
-Flujo principal:  
-El usuario accede a la sección de búsqueda  
-El usuario ingresa un término de búsqueda y/o selecciona los filtros y criterios de ordenamiento deseados.  
-El usuario presiona el botón "Aplicar".   
-El sistema valida que se haya ingresado al menos un término de búsqueda o seleccionado un filtro.  
-El sistema consulta los datos disponibles a través de la API de películas.   
-El sistema muestra la lista de películas resultantes con información básica (póster, título en español, título original año).   
-El usuario visualiza los resultados obtenidos.   
-Flujo alternativo:    
-Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.   
-Postcondición:    
-El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles   
+1. El usuario abre la aplicación.  
+2. El usuario ingresa sus credenciales en los campos correspondientes.  
+3. El usuario selecciona la opción de “Iniciar sesión”.  
+4. El sistema valida que los campos no estén vacíos.  
+5. El sistema verifica la validez de las credenciales en la base de datos.  
+6. El sistema autentica al usuario.  
+7. El sistema inicia la sesión del usuario.  
+8. El usuario es redirigido a la pantalla principal.  
 
+![Iniciar sesión](https://github.com/user-attachments/assets/320b7bdc-444f-4f82-bd96-17fa0274d7db)
 
-<img width="602" height="433" alt="Image" src="https://github.com/user-attachments/assets/2decf29c-7d9b-425b-b8fc-05f9e6ec369f" />
+---
 
+### CU-03: Gestionar perfil
 
+**Actor:** Usuario  
+**Descripción:** Permite al usuario visualizar y actualizar la información de su perfil en la aplicación, incluyendo foto, descripción de usuario, listas favoritas, etc.  
 
+**Entidades relacionadas:** Usuario, Lista, Favoritos  
 
+**Flujo principal:**
 
+1. El usuario registrado accede a la sección “Perfil”  
+2. El sistema muestra la información actual del perfil (foto, nombre de usuario, biografia)  
+3. El usuario selecciona la opción “Editar perfil”  
+4. Modifica uno o más campos (foto, biografía, etc.)  
+5. El usuario guarda los cambios  
+6. El sistema valida la información y actualiza los datos del usuario  
+7. Se muestra el perfil actualizado  
 
+**Mockup asociados:** Pantalla de perfil, pantalla de edición de perfil  
 
+![Gestionar perfil](https://github.com/user-attachments/assets/124ae173-f098-4603-ad14-7b2216f9663a)
 
+---
+
+### CU-04: Calificar y reseñar película
+
+**Actor:** Usuario  
+**Descripción:** Permite al usuario calificar y escribir una reseña sobre una película.
+
+**Flujo principal:**
+
+1. El usuario selecciona una película.  
+2. Elige una calificación (1–5 estrellas).  
+3. Escribe una reseña.  
+4. El sistema guarda la información.  
+
+**Postcondición:**  
+La calificación y reseña quedan registradas.
+
+![Reseña](https://github.com/user-attachments/assets/72a8a3f8-7466-4923-96df-b4b8758ac2e3)
+
+---
+
+### CU-05: Crear lista de películas
+
+**Actor:** Usuario  
+**Descripción:** Permite al usuario crear listas personalizadas de películas.
+
+**Flujo principal:**
+
+1. El usuario accede a la sección de listas.  
+2. Selecciona “Crear lista”.  
+3. Ingresa nombre y descripción.  
+4. Añade películas.  
+5. El sistema guarda la lista.  
+
+**Postcondición:**  
+La lista queda disponible en el perfil del usuario.
+
+![Lista 1](https://github.com/user-attachments/assets/e0a82296-1707-4e19-bc4a-8d5e2f66c3c6)  
+![Lista 2](https://github.com/user-attachments/assets/11a2678c-3da7-4386-8cc3-e26730461b77)
+
+---
+
+### CU-06: Buscar películas
+
+**Actor:** Usuario  
+
+**Descripción:**  
+Permite al usuario buscar películas dentro de la aplicación mediante criterios:
+
+- **Filtros:** Título, Género, Año de estreno, Calificación  
+- **Ordenamiento:** A → Z / Z → A, Más reciente / Más antiguo, Mayor a menor calificación / Menor a mayor calificación  
+
+**Flujo principal:**
+
+1. El usuario accede a la sección de búsqueda  
+2. El usuario ingresa un término de búsqueda y/o selecciona los filtros y criterios de ordenamiento deseados  
+3. El usuario presiona el botón "Aplicar"  
+4. El sistema valida que se haya ingresado al menos un término de búsqueda o seleccionado un filtro  
+5. El sistema consulta los datos disponibles a través de la API de películas  
+6. El sistema muestra la lista de películas resultantes con información básica (póster, título en español, título original año)  
+7. El usuario visualiza los resultados obtenidos  
+
+**Flujo alternativo:**  
+Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.
+
+**Postcondición:**  
+El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles.
+
+![Buscar](https://github.com/user-attachments/assets/2decf29c-7d9b-425b-b8fc-05f9e6ec369f)
