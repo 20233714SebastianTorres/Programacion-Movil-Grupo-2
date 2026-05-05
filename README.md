@@ -121,6 +121,8 @@ La aplicación debe permitir múltiples idiomas (ej: español e inglés).
 
 ## 4. Descripción de casos de uso
 
+<img width="1184" height="843" alt="Image" src="https://github.com/user-attachments/assets/872a6c35-a6b8-4990-9e85-17db693f29c4" />
+
 ### CU-01: Registrar usuario
 
 **Actor:** Usuario  
