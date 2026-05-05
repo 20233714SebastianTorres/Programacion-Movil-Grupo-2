@@ -153,6 +153,7 @@ Postcondición:
  
 <img width="269" height="541" alt="Image" src="https://github.com/user-attachments/assets/501fde2f-3332-4864-af2e-01cca57f96b5" />
 
+
 CU-02: Iniciar sesión 
 Actor: Usuario
 Descripción: Permite al usuario ingresar a la aplicación mediante sus credenciales para acceder a las funcionalidades de la app.
