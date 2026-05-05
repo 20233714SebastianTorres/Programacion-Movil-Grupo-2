@@ -139,17 +139,17 @@ Diagrama de clases
 
 <img width="1184" height="843" alt="Image" src="https://github.com/user-attachments/assets/872a6c35-a6b8-4990-9e85-17db693f29c4" />
 
-CU-01: Registrar usuario 
-Actor: Usuario
-Descripción: Permite a un nuevo usuario crear una cuenta en la aplicación.
-Flujo principal:
-El usuario abre la app.
-Selecciona “Registrarse”.
-Ingresa correo, contraseña y datos básicos.
-El sistema valida los datos.
-El sistema crea la cuenta.
-Postcondición:
- El usuario queda registrado y puede iniciar sesión.
+CU-01: Registrar usuario   
+Actor: Usuario  
+Descripción: Permite a un nuevo usuario crear una cuenta en la aplicación.  
+Flujo principal:  
+El usuario abre la app.  
+Selecciona “Registrarse”.  
+Ingresa correo, contraseña y datos básicos.  
+El sistema valida los datos.  
+El sistema crea la cuenta.  
+Postcondición:  
+ El usuario queda registrado y puede iniciar sesión.  
  
 <img width="269" height="541" alt="Image" src="https://github.com/user-attachments/assets/501fde2f-3332-4864-af2e-01cca57f96b5" />
 
@@ -160,80 +160,80 @@ Descripción: Permite al usuario ingresar a la aplicación mediante sus credenci
 
 Flujo principal:
 
-El usuario abre la aplicación.
-El usuario ingresa sus credenciales en los campos correspondientes.
-El usuario selecciona la opción de “Iniciar sesión”. 
-El sistema valida que los campos no estén vacíos. 
-El sistema verifica la validez de las credenciales en la base de datos.
-El sistema autentica al usuario.
-El sistema inicia la sesión del usuario.
-El usuario es redirigido a la pantalla principal.
+El usuario abre la aplicación.  
+El usuario ingresa sus credenciales en los campos correspondientes.  
+El usuario selecciona la opción de “Iniciar sesión”.   
+El sistema valida que los campos no estén vacíos.   
+El sistema verifica la validez de las credenciales en la base de datos.  
+El sistema autentica al usuario.  
+El sistema inicia la sesión del usuario.  
+El usuario es redirigido a la pantalla principal.  
 
 <img width="341" height="702" alt="image" src="https://github.com/user-attachments/assets/320b7bdc-444f-4f82-bd96-17fa0274d7db" />
 
 
 CU-03: Gestionar perfil
-Actor: Usuario
+Actor: Usuario  
 Descripción: Permite al usuario visualizar y actualizar la información de su perfil en la aplicación, incluyendo foto, descripción de usuario, listas favoritas, etc.
-Entidades relacionadas: Usuario, Lista, Favoritos.
-Flujo principal:
-El usuario registrado accede a la sección “Perfil”
-El sistema muestra la información actual del perfil (foto, nombre de usuario, biografia)
-El usuario selecciona la opción “Editar perfil”
-Modifica uno o más campos (foto, biografía, etc.)
-El usuario guarda los cambios
-El sistema valida la información y actualiza los datos del usuario
-Se muestra el perfil actualizado
-Mockup asociados: Pantalla de perfil, pantalla de edición de perfil
+Entidades relacionadas: Usuario, Lista, Favoritos.  
+Flujo principal:  
+El usuario registrado accede a la sección “Perfil”  
+El sistema muestra la información actual del perfil (foto, nombre de usuario, biografia)  
+El usuario selecciona la opción “Editar perfil”  
+Modifica uno o más campos (foto, biografía, etc.)  
+El usuario guarda los cambios  
+El sistema valida la información y actualiza los datos del usuario  
+Se muestra el perfil actualizado  
+Mockup asociados: Pantalla de perfil, pantalla de edición de perfil  
 
 <img width="570" height="393" alt="image" src="https://github.com/user-attachments/assets/124ae173-f098-4603-ad14-7b2216f9663a" />
 
-CU-04: Calificar y reseñar película
-Actor: Usuario
-Descripción: Permite al usuario calificar y escribir una reseña sobre una película.
-Flujo principal:
-El usuario selecciona una película.
-Elige una calificación (1–5 estrellas).
-Escribe una reseña.
-El sistema guarda la información.
-Postcondición:
- La calificación y reseña quedan registradas.
+CU-04: Calificar y reseñar película  
+Actor: Usuario  
+Descripción: Permite al usuario calificar y escribir una reseña sobre una película.  
+Flujo principal:   
+El usuario selecciona una película.   
+Elige una calificación (1–5 estrellas).   
+Escribe una reseña.   
+El sistema guarda la información.   
+Postcondición:   
+ La calificación y reseña quedan registradas.   
 
 <img width="555" height="544" alt="image" src="https://github.com/user-attachments/assets/72a8a3f8-7466-4923-96df-b4b8758ac2e3" />
 
-CU-05: Crear lista de películas
-Actor: Usuario
-Descripción: Permite al usuario crear listas personalizadas de películas.
-Flujo principal:
-El usuario accede a la sección de listas.
-Selecciona “Crear lista”.
-Ingresa nombre y descripción.
-Añade películas.
-El sistema guarda la lista.
-Postcondición:
- La lista queda disponible en el perfil del usuario.
+CU-05: Crear lista de películas  
+Actor: Usuario  
+Descripción: Permite al usuario crear listas personalizadas de películas.  
+Flujo principal:  
+El usuario accede a la sección de listas.  
+Selecciona “Crear lista”.  
+Ingresa nombre y descripción.  
+Añade películas.  
+El sistema guarda la lista.   
+Postcondición:   
+ La lista queda disponible en el perfil del usuario.  
 
 <img width="581" height="379" alt="image" src="https://github.com/user-attachments/assets/e0a82296-1707-4e19-bc4a-8d5e2f66c3c6" /> <img width="181" height="318" alt="image" src="https://github.com/user-attachments/assets/11a2678c-3da7-4386-8cc3-e26730461b77" />
 
 
-CU-06: Buscar películas
-Actor: Usuario
-Descripción: 
-Permite al usuario buscar películas dentro de la aplicación mediante criterios
-De Filtros: Título, Género, Año de estreno, Calificación
-De Ordenamiento: A → Z / Z → A , Más reciente / Más antiguo, Mayor a menor calificación / Menor a mayor calificación
-Flujo principal:
-El usuario accede a la sección de búsqueda
-El usuario ingresa un término de búsqueda y/o selecciona los filtros y criterios de ordenamiento deseados.
-El usuario presiona el botón "Aplicar". 
-El sistema valida que se haya ingresado al menos un término de búsqueda o seleccionado un filtro.
-El sistema consulta los datos disponibles a través de la API de películas.
-El sistema muestra la lista de películas resultantes con información básica (póster, título en español, título original año).
-El usuario visualiza los resultados obtenidos.
-Flujo alternativo: 
-Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.
-Postcondición: 
-El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles
+CU-06: Buscar películas  
+Actor: Usuario  
+Descripción:   
+Permite al usuario buscar películas dentro de la aplicación mediante criterios  
+De Filtros: Título, Género, Año de estreno, Calificación  
+De Ordenamiento: A → Z / Z → A , Más reciente / Más antiguo, Mayor a menor calificación / Menor a mayor calificación  
+Flujo principal:  
+El usuario accede a la sección de búsqueda  
+El usuario ingresa un término de búsqueda y/o selecciona los filtros y criterios de ordenamiento deseados.  
+El usuario presiona el botón "Aplicar".   
+El sistema valida que se haya ingresado al menos un término de búsqueda o seleccionado un filtro.  
+El sistema consulta los datos disponibles a través de la API de películas.   
+El sistema muestra la lista de películas resultantes con información básica (póster, título en español, título original año).   
+El usuario visualiza los resultados obtenidos.   
+Flujo alternativo:    
+Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.   
+Postcondición:    
+El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles   
 
 
 <img width="602" height="433" alt="Image" src="https://github.com/user-attachments/assets/2decf29c-7d9b-425b-b8fc-05f9e6ec369f" />
