@@ -31,7 +31,7 @@ Software de diseño vectorial utilizado para la creación de logos, mockups e in
 
 
 
-1.1. Captura de requisitos
+# 1.1. Captura de requisitos
 
 1.1.1. Requisitos funcionales
 
@@ -129,13 +129,16 @@ Internacionalización:
 
  La aplicación debe permitir múltiples idiomas (ej: español e inglés).
  
-2. Diagrama de despliegue
+# 2. Diagrama de despliegue
 <img width="769" height="666" alt="image" src="https://github.com/user-attachments/assets/a34915e2-0de2-4344-9716-651c893ac8b5" />
 
-3. Diagrama de casos de uso
+# 3. Diagrama de casos de uso
 <img width="732" height="640" alt="image" src="https://github.com/user-attachments/assets/e8cf9551-978f-4ba1-bb30-fb065a37beec" />
 
-4.  Descripción de casos de uso 
+# 4.  Descripción de casos de uso 
+Diagrama de clases
+
+<img width="1184" height="843" alt="Image" src="https://github.com/user-attachments/assets/872a6c35-a6b8-4990-9e85-17db693f29c4" />
 
 CU-01: Registrar usuario 
 Actor: Usuario
