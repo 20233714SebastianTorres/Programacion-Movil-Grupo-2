@@ -8,6 +8,7 @@ Por ello, el presente proyecto propone el desarrollo de una aplicación móvil i
 El proyecto busca aplicar conceptos de desarrollo móvil multiplataforma, diseño de interfaces modernas y experiencia de usuario, integrando herramientas actuales utilizadas en la industria del software. Asimismo, se priorizará una interfaz intuitiva, visualmente atractiva y optimizada para dispositivos móviles Android.
 
 Herramientas utilizadas:
+
 -Flutter
 
 Framework principal utilizado para el desarrollo de la aplicación móvil multiplataforma mediante el lenguaje Dart.
