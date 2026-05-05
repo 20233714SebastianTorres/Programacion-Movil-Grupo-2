@@ -157,22 +157,25 @@ Postcondición:
 <img width="581" height="379" alt="image" src="https://github.com/user-attachments/assets/e0a82296-1707-4e19-bc4a-8d5e2f66c3c6" /> <img width="181" height="318" alt="image" src="https://github.com/user-attachments/assets/11a2678c-3da7-4386-8cc3-e26730461b77" />
 
 
-
 CU-06: Buscar películas
 Actor: Usuario
-Descripción: Permite al usuario buscar películas dentro de la aplicación mediante criterios
+Descripción: 
+Permite al usuario buscar películas dentro de la aplicación mediante criterios
 De Filtros: Título, Género, Año de estreno, Calificación
 De Ordenamiento: A → Z / Z → A , Más reciente / Más antiguo, Mayor a menor calificación / Menor a mayor calificación
 Flujo principal:
 El usuario accede a la sección de búsqueda
-El usuario ingresa un término de búsqueda y/o selecciona uno o más filtros disponibles.
-El usuario de manera opcional selecciona un criterio de ordenamiento
-El sistema valida que al menos un criterio de búsqueda o filtro haya sido ingresado
+El usuario ingresa un término de búsqueda y/o selecciona los filtros y criterios de ordenamiento deseados.
+El usuario presiona el botón "Aplicar". 
+El sistema valida que se haya ingresado al menos un término de búsqueda o seleccionado un filtro.
 El sistema consulta los datos disponibles a través de la API de películas.
-El sistema muestra una lista de resultados que coincidan con los criterios ingresados.
+El sistema muestra la lista de películas resultantes con información básica (póster, título en español, título original año).
 El usuario visualiza los resultados obtenidos.
-Flujo alternativo: Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.
-Postcondición: El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles
+Flujo alternativo: 
+Si no se encuentran resultados, el sistema muestra un mensaje indicando que no hay coincidencias y sugiere modificar los criterios de búsqueda.
+Postcondición: 
+El usuario visualiza una lista de películas que coinciden con su búsqueda y puede seleccionar una para ver sus detalles
+
 
 <img width="602" height="433" alt="Image" src="https://github.com/user-attachments/assets/2decf29c-7d9b-425b-b8fc-05f9e6ec369f" />
 
