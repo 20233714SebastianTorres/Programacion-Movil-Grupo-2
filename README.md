@@ -29,6 +29,7 @@ Plataforma utilizada para almacenar el repositorio del proyecto y gestionar el d
 
 Software de diseño vectorial utilizado para la creación de logos, mockups e interfaces visuales.
 
+
 1.1. Captura de requisitos
 
 1.1.1. Requisitos funcionales
