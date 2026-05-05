@@ -1,5 +1,4 @@
-1. Introducción y entorno de desarrollo
-
+# 1. Introducción y entorno de desarrollo
 
 Actualmente, las aplicaciones enfocadas en entretenimiento y redes sociales han tomado gran relevancia debido a la necesidad de los usuarios de compartir opiniones, descubrir contenido y registrar sus experiencias digitales. En el ámbito cinematográfico, muchas personas buscan plataformas donde puedan organizar las películas que han visto, calificarlas y encontrar recomendaciones según sus gustos personales.
 
@@ -31,7 +30,7 @@ Software de diseño vectorial utilizado para la creación de logos, mockups e in
 
 
 
-# 1.1. Captura de requisitos
+## 1.1. Captura de requisitos
 
 1.1.1. Requisitos funcionales
 
@@ -88,7 +87,7 @@ Integración con API externa:
  El sistema debe consumir una API de películas (como TMDB) para obtener información actualizada.
 
 
-1.1.2. Requisitos no funcionales
+## 1.1.2. Requisitos no funcionales
 
 Compatibilidad:
 
