@@ -32,9 +32,12 @@ Software de diseño vectorial utilizado para la creación de logos, mockups e in
 1.1. Captura de requisitos
 
 1.1.1. Requisitos funcionales
+
 Registro e inicio de sesión:
+
  El sistema debe permitir a los usuarios registrarse e iniciar sesión mediante correo electrónico, Google o redes sociales.
 Gestión de perfil:
+
  El sistema debe permitir al usuario crear y editar su perfil, incluyendo foto, biografía y listas favoritas.
 Búsqueda de películas:
  El sistema debe permitir buscar películas por título, género, año o actores.
