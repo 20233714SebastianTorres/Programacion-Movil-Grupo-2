@@ -9,14 +9,23 @@ El proyecto busca aplicar conceptos de desarrollo móvil multiplataforma, diseñ
 
 Herramientas utilizadas:
 -Flutter
+
 Framework principal utilizado para el desarrollo de la aplicación móvil multiplataforma mediante el lenguaje Dart.
+
 -Visual Studio Code
+
 Editor de código empleado para la programación, depuración y administración del proyecto.
+
 -Android Studio
+
 Herramienta utilizada para el emulador Android y la configuración del SDK necesario para ejecutar aplicaciones móviles.
+
 -GitHub
+
 Plataforma utilizada para almacenar el repositorio del proyecto y gestionar el desarrollo colaborativo.
+
 -Inkscape
+
 Software de diseño vectorial utilizado para la creación de logos, mockups e interfaces visuales.
 
 1.1. Captura de requisitos
