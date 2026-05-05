@@ -23,6 +23,9 @@ Plataforma utilizada para almacenar el repositorio del proyecto y gestionar el d
 - **Inkscape**  
 Software de diseño vectorial utilizado para la creación de logos, mockups e interfaces visuales.
 
+- **Figma**  
+Es una herramienta de diseño digital que se usa para crear interfaces.
+
 ---
 
 ## 1.1. Captura de requisitos
