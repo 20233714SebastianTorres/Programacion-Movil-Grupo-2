@@ -1,5 +1,4 @@
 // lib/pages/sign_in/sign_in_page.dart
-import 'dart:html';
 
 import 'package:biblioul/components/login_header.dart';
 import 'package:flutter/material.dart';
@@ -7,102 +6,162 @@ import 'package:get/get.dart';
 import 'sign_in_controller.dart';
 
 class SignInPage extends StatelessWidget {
-  SignInController control = Get.put(SignInController());
+  final SignInController control = Get.put(SignInController());
 
   SignInPage({super.key});
 
-  Widget _form(BuildContext context, ColorScheme colors) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.8,
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: colors.background, // El color va aquí dentro
-        border: Border.all(
-          width: 1,
-          color: Colors.grey, // Color del borde
+  Widget _inputField({
+    required TextEditingController controller,
+    required String hint,
+    required IconData icon,
+    bool obscure = false,
+  }) {
+    return TextField(
+      controller: controller,
+      obscureText: obscure,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+      decoration: InputDecoration(
+        hintText: hint,
+        hintStyle: const TextStyle(
+          color: Colors.white54,
         ),
+        prefixIcon: Icon(
+          icon,
+          color: const Color(0xFF8B5CF6),
+        ),
+        filled: true,
+        fillColor: const Color(0xFF1E293B),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(
+            color: Colors.white10,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(
+            color: Color(0xFF8B5CF6),
+            width: 2,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _form(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.88,
+      padding: const EdgeInsets.all(25),
+      decoration: BoxDecoration(
+        color: const Color(0xFF111827),
+        borderRadius: BorderRadius.circular(28),
+        border: Border.all(
+          color: Colors.white10,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.deepPurple.withOpacity(0.25),
+            blurRadius: 30,
+            spreadRadius: 2,
+          ),
+        ],
       ),
       child: Column(
         children: [
-          Text('INGRESA ESTA INFORMACIÓN'),
-          SizedBox(
-            height: 10,
+          const Text(
+            'INGRESA ESTA INFORMACIÓN',
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 15,
+              letterSpacing: 1,
+            ),
           ),
-          TextField(
+          const SizedBox(height: 28),
+          _inputField(
             controller: control.username,
-            decoration: InputDecoration(
-              hintText: 'Usuario',
-              prefixIcon: Icon(Icons.person),
-              border: UnderlineInputBorder(),
-            ),
+            hint: 'Usuario',
+            icon: Icons.person,
           ),
-          TextField(
+          const SizedBox(height: 18),
+          _inputField(
             controller: control.password,
-            obscureText: true,
-            decoration: InputDecoration(
-              hintText: 'Contraseña',
-              prefixIcon: Icon(Icons.lock),
-              border: UnderlineInputBorder(),
+            hint: 'Contraseña',
+            icon: Icons.lock,
+            obscure: true,
+          ),
+          Obx(
+            () => Column(
+              children: [
+                SizedBox(
+                  height: control.message.value == '' ? 0 : 12,
+                ),
+                Text(
+                  control.message.value,
+                  style: TextStyle(
+                    color: control.messageColor.value,
+                  ),
+                ),
+                SizedBox(
+                  height: control.message.value == '' ? 0 : 12,
+                ),
+              ],
             ),
           ),
-          Obx(() => Column(
-                children: [
-                  SizedBox(height: control.message.value == '' ? 0 : 10),
-                  Text(
-                    control.message.value,
-                    style: TextStyle(color: control.messageColor.value),
-                  ),
-                  SizedBox(height: control.message.value == '' ? 0 : 10),
-                ],
-              )),
-          /*Text(
-              'Usuario y contreseña no valido'
-              style: TextStyle(color: Colors.red),
-            ),*/
-
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {
-                print('hola en la vista');
                 control.login();
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: colors.secondary,
-                foregroundColor: colors.surface,
-                padding: EdgeInsets.symmetric(vertical: 20),
+                backgroundColor: const Color(0xFF7C3AED),
+                foregroundColor: Colors.white,
+                elevation: 15,
+                shadowColor: Colors.deepPurpleAccent,
+                padding: const EdgeInsets.symmetric(
+                  vertical: 18,
+                ),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.zero,
+                  borderRadius: BorderRadius.circular(18),
                 ),
               ),
-              child: Text(
+              child: const Text(
                 'INICIAR SESIÓN',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  letterSpacing: 1,
+                ),
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('No tienes una cuenta?'),
-              SizedBox(
-                width: 4,
+              const Text(
+                '¿No tienes una cuenta?',
+                style: TextStyle(
+                  color: Colors.white54,
+                ),
               ),
+              const SizedBox(width: 5),
               InkWell(
                 onTap: () {
                   control.goToSignUp(context);
                 },
-                child: Text(
+                child: const Text(
                   'Creala aquí',
                   style: TextStyle(
-                    color: Colors.orange,
+                    color: Color(0xFF8B5CF6),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -112,93 +171,83 @@ class SignInPage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Olvidaste tu contraseña?'),
-        SizedBox(
-          width: 4,
+        const Text(
+          '¿Olvidaste tu contraseña?',
+          style: TextStyle(
+            color: Colors.white54,
+          ),
         ),
+        const SizedBox(width: 5),
         InkWell(
           onTap: () {
-            control.goToRecoverPassword(context);
+            control.goToRecoverPassword(
+              context,
+            );
           },
-          child: Text(
+          child: const Text(
             'Recuperala aquí',
             style: TextStyle(
-              color: Colors.orange,
+              color: Color(0xFF8B5CF6),
               fontWeight: FontWeight.bold,
             ),
           ),
-        )
+        ),
       ],
     );
   }
 
-  Widget _background(BuildContext context, ColorScheme colors) {
-    return Column(
-      children: [
-        // 30% superior
-        Expanded(
-          flex: 5, // 30%
-          child: Container(
-            width: double.infinity,
-            color: colors.tertiaryContainer, // puedes cambiar color
-          ),
+  Widget _background() {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Color(0xFF1E1B4B),
+            Color(0xFF0F172A),
+            Color(0xFF020617),
+          ],
         ),
-
-        // 70% inferior
-        Expanded(
-          flex: 5, // 70%
-          child: Container(
-            width: double.infinity,
-            color: colors.surfaceContainerHighest, // otro color
-          ),
-        ),
-      ],
+      ),
     );
   }
 
   Widget _buildBody(BuildContext context) {
-    ColorScheme colors = Theme.of(context).colorScheme;
-
     return SafeArea(
-        child: Stack(children: [
-      _background(context, colors),
-      Column(
+      child: Stack(
         children: [
-          Row(
-            mainAxisAlignment:
-                MainAxisAlignment.center, // centra horizontalmente
-            children: [LoginHeader()],
+          _background(),
+          Center(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
+                child: Column(
+                  children: [
+                    const LoginHeader(),
+                    const SizedBox(height: 25),
+                    _form(context),
+                    const SizedBox(height: 20),
+                    _recoverPassword(context),
+                  ],
+                ),
+              ),
+            ),
           ),
-          _form(context, colors),
-          Spacer(),
-          _recoverPassword(context),
-          SizedBox(
-            height: 15,
-          )
         ],
       ),
-    ]));
+    );
   }
-
-  /*
-  Column(
-    children:[
-      SafeArea...
-    ]
-  )
-
-   */
 
   @override
   Widget build(BuildContext context) {
     control.context = context;
 
-    return MaterialApp(
-      home: Scaffold(
-        resizeToAvoidBottomInset: false,
-        appBar: null,
-        body: _buildBody(context),
-      ),
+    return Scaffold(
+      backgroundColor: const Color(0xFF020617),
+      resizeToAvoidBottomInset: false,
+      body: _buildBody(context),
     );
   }
 }

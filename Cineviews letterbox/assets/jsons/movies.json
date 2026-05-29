@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "title": "Interstellar",
+    "year": 2014,
+    "synopsis": "Un grupo de astronautas viaja a través de un agujero negro para salvar a la humanidad.",
+    "genre": "Ciencia ficción",
+    "duration": 169,
+    "average_rating": 4.8,
+    "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "director": "Christopher Nolan",
+    "actors": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain"
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+    "reviews": [
+      {
+        "id": 1,
+        "content": "Visualmente increíble y emocionante.",
+        "rating": 5,
+        "user_id": 1,
+        "movie_id": 1,
+        "user": {
+          "id": 1,
+          "username": "jdoe",
+          "password": "",
+          "first_name": "John",
+          "last_name": "Doe",
+          "email": "jdoe@example.com",
+          "status": true
+        }
+      },
+      {
+        "id": 2,
+        "content": "Una de las mejores películas de Nolan.",
+        "rating": 5,
+        "user_id": 2,
+        "movie_id": 1,
+        "user": {
+          "id": 2,
+          "username": "mgarcia",
+          "password": "",
+          "first_name": "Maria",
+          "last_name": "Garcia",
+          "email": "mgarcia@example.com",
+          "status": true
+        }
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "Inception",
+    "year": 2010,
+    "synopsis": "Un ladrón entra en los sueños de las personas para robar secretos.",
+    "genre": "Acción",
+    "duration": 148,
+    "average_rating": 4.7,
+    "poster": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+    "director": "Christopher Nolan",
+    "actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Tom Hardy"
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+    "reviews": [
+      {
+        "id": 3,
+        "content": "Te hace pensar demasiado.",
+        "rating": 5,
+        "user_id": 3,
+        "movie_id": 2,
+        "user": {
+          "id": 3,
+          "username": "csmith",
+          "password": "",
+          "first_name": "Chris",
+          "last_name": "Smith",
+          "email": "csmith@example.com",
+          "status": true
+        }
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "The Batman",
+    "year": 2022,
+    "synopsis": "Batman investiga una serie de asesinatos en Gotham.",
+    "genre": "Superhéroes",
+    "duration": 176,
+    "average_rating": 4.5,
+    "poster": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    "director": "Matt Reeves",
+    "actors": [
+      "Robert Pattinson",
+      "Zoë Kravitz",
+      "Paul Dano"
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=mqqft2x_Aa4",
+    "reviews": [
+      {
+        "id": 5,
+        "content": "Oscura y diferente.",
+        "rating": 4,
+        "user_id": 5,
+        "movie_id": 3,
+        "user": {
+          "id": 5,
+          "username": "rpatel",
+          "password": "",
+          "first_name": "Raj",
+          "last_name": "Patel",
+          "email": "rpatel@example.com",
+          "status": true
+        }
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "synopsis": "Los Avengers intentan revertir el daño causado por Thanos.",
+    "genre": "Acción",
+    "duration": 181,
+    "average_rating": 4.9,
+    "poster": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "director": "Anthony Russo",
+    "actors": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=TcMBFSGVi1c",
+    "reviews": [
+      {
+        "id": 6,
+        "content": "Final épico para la saga.",
+        "rating": 5,
+        "user_id": 6,
+        "movie_id": 4,
+        "user": {
+          "id": 6,
+          "username": "lwilson",
+          "password": "",
+          "first_name": "Laura",
+          "last_name": "Wilson",
+          "email": "lwilson@example.com",
+          "status": true
+        }
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "Joker",
+    "year": 2019,
+    "synopsis": "La transformación de Arthur Fleck en el Joker.",
+    "genre": "Drama",
+    "duration": 122,
+    "average_rating": 4.6,
+    "poster": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    "director": "Todd Phillips",
+    "actors": [
+      "Joaquin Phoenix",
+      "Robert De Niro",
+      "Zazie Beetz"
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=zAGVQLHvwOY",
+    "reviews": [
+      {
+        "id": 7,
+        "content": "La actuación de Joaquin Phoenix es brutal.",
+        "rating": 5,
+        "user_id": 7,
+        "movie_id": 5,
+        "user": {
+          "id": 7,
+          "username": "tnguyen",
+          "password": "",
+          "first_name": "Thanh",
+          "last_name": "Nguyen",
+          "email": "tnguyen@example.com",
+          "status": true
+        }
+      }
+    ]
+  }
+]
