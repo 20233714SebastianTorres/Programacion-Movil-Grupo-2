@@ -22,10 +22,12 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/ulises.png
+    - assets/images/Imagen1.png
     - assets/images/book.png
     - assets/jsons/users.json
     - assets/jsons/books.json
     - assets/jsons/genres.json
+    - assets/jsons/movies.json
   #  - images/a_dot_ham.jpeg
   # fonts:
   #   - family: Schyler

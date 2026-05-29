@@ -8,51 +8,72 @@ class MaterialTheme {
   static ColorScheme lightScheme() {
     return const ColorScheme(
       brightness: Brightness.light,
-      primary: Color(0xff8d4e2c),
-      surfaceTint: Color(0xff8d4e2c),
-      onPrimary: Color(0xffffffff),
-      primaryContainer: Color(0xffffdbcb),
-      onPrimaryContainer: Color(0xff703717),
-      secondary: Color(0xff765849),
-      onSecondary: Color(0xffffffff),
-      secondaryContainer: Color(0xffffdbcb),
-      onSecondaryContainer: Color(0xff5c4033),
-      tertiary: Color(0xff655f31),
-      onTertiary: Color(0xffffffff),
-      tertiaryContainer: Color(0xffede4aa),
-      onTertiaryContainer: Color(0xff4d481c),
-      error: Color(0xffba1a1a),
-      onError: Color(0xffffffff),
-      errorContainer: Color(0xffffdad6),
-      onErrorContainer: Color(0xff93000a),
-      surface: Color(0xfffff8f6),
-      onSurface: Color(0xff221a16),
-      onSurfaceVariant: Color(0xff52443d),
-      outline: Color(0xff85736c),
-      outlineVariant: Color(0xffd7c2b9),
-      shadow: Color(0xff000000),
-      scrim: Color(0xff000000),
-      inverseSurface: Color(0xff382e2a),
-      inversePrimary: Color(0xffffb692),
-      primaryFixed: Color(0xffffdbcb),
-      onPrimaryFixed: Color(0xff341000),
-      primaryFixedDim: Color(0xffffb692),
-      onPrimaryFixedVariant: Color(0xff703717),
-      secondaryFixed: Color(0xffffdbcb),
-      onSecondaryFixed: Color(0xff2c160b),
-      secondaryFixedDim: Color(0xffe6beac),
-      onSecondaryFixedVariant: Color(0xff5c4033),
-      tertiaryFixed: Color(0xffede4aa),
-      onTertiaryFixed: Color(0xff1f1c00),
-      tertiaryFixedDim: Color(0xffd0c890),
-      onTertiaryFixedVariant: Color(0xff4d481c),
-      surfaceDim: Color(0xffe8d7d0),
-      surfaceBright: Color(0xfffff8f6),
-      surfaceContainerLowest: Color(0xffffffff),
-      surfaceContainerLow: Color(0xfffff1eb),
-      surfaceContainer: Color(0xfffceae3),
-      surfaceContainerHigh: Color(0xfff6e5de),
-      surfaceContainerHighest: Color(0xfff0dfd8),
+
+      primary: Color(0xFF8A2BE2), // morado neon
+      onPrimary: Colors.white,
+
+      secondary: Color(0xFF00D4FF), // cyan
+      onSecondary: Colors.white,
+
+      tertiary: Color(0xFF151A2E),
+
+      surface: Color(0xFF0F172A), // fondo oscuro
+      onSurface: Colors.white,
+
+      background: Color(0xFF081120),
+      onBackground: Colors.white,
+
+      error: Colors.red,
+      onError: Colors.white,
+
+      primaryContainer: Color(0xFF6D28D9),
+      onPrimaryContainer: Colors.white,
+
+      secondaryContainer: Color(0xFF082F49),
+      onSecondaryContainer: Colors.white,
+
+      tertiaryContainer: Color(0xFF111827),
+      onTertiaryContainer: Colors.white,
+
+      surfaceTint: Color(0xFF8A2BE2),
+
+      outline: Color(0xFF334155),
+      outlineVariant: Color(0xFF1E293B),
+
+      shadow: Colors.black,
+      scrim: Colors.black,
+
+      inverseSurface: Color(0xFF1E293B),
+      onSurfaceVariant: Color(0xFFCBD5E1),
+
+      inversePrimary: Color(0xFF00D4FF),
+
+      primaryFixed: Color(0xFF8A2BE2),
+      onPrimaryFixed: Colors.white,
+
+      primaryFixedDim: Color(0xFF7C3AED),
+      onPrimaryFixedVariant: Colors.white,
+
+      secondaryFixed: Color(0xFF00D4FF),
+      onSecondaryFixed: Colors.white,
+
+      secondaryFixedDim: Color(0xFF0891B2),
+      onSecondaryFixedVariant: Colors.white,
+
+      tertiaryFixed: Color(0xFF111827),
+      onTertiaryFixed: Colors.white,
+
+      tertiaryFixedDim: Color(0xFF1E293B),
+      onTertiaryFixedVariant: Colors.white,
+
+      surfaceDim: Color(0xFF020617),
+      surfaceBright: Color(0xFF1E293B),
+
+      surfaceContainerLowest: Color(0xFF020617),
+      surfaceContainerLow: Color(0xFF0F172A),
+      surfaceContainer: Color(0xFF111827),
+      surfaceContainerHigh: Color(0xFF1E293B),
+      surfaceContainerHighest: Color(0xFF273549),
     );
   }
 

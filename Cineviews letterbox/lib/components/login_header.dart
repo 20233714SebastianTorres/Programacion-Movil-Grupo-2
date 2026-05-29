@@ -1,31 +1,60 @@
-// lib/compnents/login_hader.dart
-//
+// lib/components/login_header.dart
+
 import 'package:flutter/material.dart';
 
 class LoginHeader extends StatelessWidget {
-  LoginHeader();
+  const LoginHeader({super.key});
 
   Widget _buildBody(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
-        Image.asset(
-          'assets/images/ulises.png',
-          width: 140,
-          height: 140,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Text(
-          'BiblioApp ULima',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.deepPurple.withOpacity(0.25),
+                blurRadius: 25,
+                spreadRadius: 2,
+              ),
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              'assets/images/Imagen1.png',
+              width: 160,
+              height: 160,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
+          height: 25,
+        ),
+        const Text(
+          'BiblioApp ULima',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1,
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const Text(
+          'Lee, aprende y descubre',
+          style: TextStyle(
+            color: Colors.white54,
+            fontSize: 14,
+          ),
+        ),
+        const SizedBox(
           height: 20,
         ),
       ],
