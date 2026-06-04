@@ -69,6 +69,7 @@ class ProfilePage extends StatelessWidget {
             Obx(() => TextField(
                   controller: control.bioController,
                   maxLines: 3,
+                  maxLength: 200,
                   enabled: control.editing.value,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(

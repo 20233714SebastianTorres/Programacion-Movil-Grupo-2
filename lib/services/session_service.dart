@@ -21,6 +21,7 @@ class SessionService extends GetxService {
     required String firstName,
     required String lastName,
     required String email,
+    String? bio,
   }) {
     final User? user = currentUser.value;
     if (user == null) return;
@@ -39,6 +40,7 @@ class SessionService extends GetxService {
       profilePicture: user.profilePicture,
       sex: user.sex,
       nationality: user.nationality,
+      bio: bio ?? user.bio,
     );
   }
 }

@@ -23,6 +23,7 @@ class ProfileController extends GetxController {
     final String fullName = '${user.firstName} ${user.lastName}'.trim();
     nameController.text = fullName.isEmpty ? user.username : fullName;
     emailController.text = user.email;
+    bioController.text = user.bio ?? '';
   }
 
   void toggleEditing() {
@@ -39,6 +40,7 @@ class ProfileController extends GetxController {
         firstName: firstName,
         lastName: lastName,
         email: emailController.text.trim(),
+        bio: bioController.text.trim(),
       );
       loadFromSession();
     }

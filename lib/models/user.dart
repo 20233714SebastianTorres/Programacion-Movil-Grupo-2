@@ -16,6 +16,7 @@ class User {
   final String? profilePicture;
   final Sex? sex;
   final Nation? nationality;
+  final String? bio;
 
   User({
     required this.id,
@@ -31,6 +32,7 @@ class User {
     this.profilePicture,
     this.sex,
     this.nationality,
+    this.bio,
   });
 
   // Constructor adicional
@@ -68,6 +70,7 @@ class User {
       nationality: json['nationality'] != null
           ? Nation.fromJson(json['nationality'])
           : null,
+      bio: json['bio'] as String?,
     );
   }
 
@@ -86,6 +89,7 @@ class User {
       'profile_picture': profilePicture,
       'sex': sex?.toJson(),
       'nationality': nationality?.toJson(),
+      'bio': bio,
     };
   }
 
