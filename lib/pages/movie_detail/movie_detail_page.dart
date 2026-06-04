@@ -144,6 +144,16 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 16),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: control.markAsWatched,
+                icon: const Icon(Icons.visibility),
+                label: const Text("Marcar como vista",
+                ), 
+              ),
+            ),
             const SizedBox(height: 20),
             Text(
               movie.title,

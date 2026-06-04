@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../models/movie.dart';
 import '../../models/review.dart';
 import '../../services/comment_service.dart';
+import '../../services/watched_service.dart';
 
 class MovieDetailController extends GetxController {
   final CommentService commentService = Get.isRegistered<CommentService>()
@@ -14,6 +15,10 @@ class MovieDetailController extends GetxController {
   final RxDouble userRating = 0.0.obs;
   final TextEditingController commentController = TextEditingController();
   final RxList<Review> localReviews = <Review>[].obs;
+  final WatchedService watchedService =
+    Get.isRegistered<WatchedService>()
+        ? Get.find<WatchedService>()
+        : Get.put(WatchedService());
 
   late Movie movie;
 
@@ -37,6 +42,10 @@ class MovieDetailController extends GetxController {
 
   void setRating(double rating) {
     userRating.value = rating;
+  }
+
+  void markAsWatched() {
+  watchedService.toggle(movie);
   }
 
   void publishComment(BuildContext context) {
