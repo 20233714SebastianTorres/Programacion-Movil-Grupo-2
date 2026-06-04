@@ -1,0 +1,70 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub/
+
+# Build outputs
+/build/
+
+# iOS
+/ios/Flutter/Flutter.framework
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/Generated.xcconfig
+/ios/Pods/
+/ios/Podfile.lock
+
+# Android
+/android/.gradle
+**/android/local.properties
+**/local.properties
+**/android/**/local.properties
+**/android/**/.gradle
+
+# Gradle
+.gradle/
+
+# Generated files
+**/GeneratedPluginRegistrant.*
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Misc
+.DS_Store
+*.log
+*.lock
+*.tmp
+*.swp
+Thumbs.db
+
+# Keystore files
+*.jks
+*.keystore
+
+# User-specific files
+*.orig
+
+# Coverage
+coverage/
+
+# Web
+/build/web/
+
+# Env / secrets
+.env
+.env.*
+
+# macOS
+*.app
+
+# Windows
+*.exe
+
+# Caches
+**/build/
