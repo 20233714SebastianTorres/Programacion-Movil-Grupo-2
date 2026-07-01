@@ -72,12 +72,17 @@ class SignUpController extends GetxController {
 			return;
 		}
 
+		final String firstNameText = usernameText;
+		final String lastNameText = emailText.contains('@')
+				? emailText.split('@').first
+				: usernameText;
+
 		final User user = User(
 			id: 0,
 			username: usernameText,
 			password: passwordText,
-			firstName: '',
-			lastName: '',
+			firstName: firstNameText,
+			lastName: lastNameText,
 			email: emailText,
 			resetKey: null,
 			status: true,

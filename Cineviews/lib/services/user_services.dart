@@ -1,116 +1,86 @@
-// lib/serices/user_service.dart
+// lib/services/user_services.dart
 
 import 'dart:convert';
 import 'package:biblioul/configs/generic_response.dart';
-import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 
 import '../models/user.dart';
 
 class UserService {
-  static List<User>? _cachedUsers;
+  static const String _baseUrl = 'http://10.0.2.2:5000/apis/v1/users';
 
-  Future<List<User>> _loadUsers() async {
-    if (_cachedUsers != null) {
-      return _cachedUsers!;
-    }
-
-    String jsonString = await rootBundle.loadString('assets/jsons/users.json');
-    final List<dynamic> jsonList = json.decode(jsonString);
-
-    _cachedUsers = jsonList.map((json) => User.fromJson(json)).toList();
-    return _cachedUsers!;
-  }
-
-  Future<GenericResponse> login(User user) async {
+  Future<GenericResponse<User>> login(User user) async {
     try {
-      final List<User> users = await _loadUsers();
+      final response = await http.post(
+        Uri.parse('$_baseUrl/login'),
+        headers: {'Content-Type': 'application/json; charset=UTF-8'},
+        body: jsonEncode({
+          'username': user.username,
+          'password': user.password,
+        }),
+      );
 
-      // buscar el usario que coincide con el usuario del formulario
-      for (User u in users) {
-        if (user.username == u.username && user.password == u.password) {
-          return GenericResponse(
-              success: true, data: u, message: 'Login exitoso', error: null);
-        }
+      final decoded = jsonDecode(response.body) as Map<String, dynamic>;
+
+      if (response.statusCode == 200 && decoded['success'] == true) {
+        final userData = decoded['data']['user'] as Map<String, dynamic>;
+        return GenericResponse<User>(
+          success: true,
+          data: User.fromJson(userData),
+          message: decoded['message'] ?? 'Login exitoso',
+          error: null,
+        );
       }
-      // si sale del for, es que no encontró al usuario
-      return GenericResponse(
-          success: false,
-          data: null,
-          message: 'Usuario y/o contraseña no válidos',
-          error: null);
+
+      return GenericResponse<User>(
+        success: false,
+        data: null,
+        message: decoded['message'] ?? 'Usuario y/o contraseña no válidos',
+        error: decoded['error'],
+      );
     } catch (e, stackTrace) {
-      print('Error: $e'); // 'Error ' + e;
+      print('Error: $e');
       print('Stack Trace: $stackTrace');
-      return GenericResponse(
-          success: false,
-          data: null,
-          message: 'Ocurrió un error no esperado en el login',
-          error: stackTrace.toString());
+      return GenericResponse<User>(
+        success: false,
+        data: null,
+        message: 'Ocurrió un error no esperado en el login',
+        error: stackTrace.toString(),
+      );
     }
   }
 
   Future<GenericResponse<User>> register(User user) async {
     try {
-      final List<User> users = await _loadUsers();
-
-      final bool usernameExists = users.any(
-        (existingUser) =>
-            existingUser.username.toLowerCase() == user.username.toLowerCase(),
+      final response = await http.post(
+        Uri.parse('$_baseUrl/register'),
+        headers: {'Content-Type': 'application/json; charset=UTF-8'},
+        body: jsonEncode({
+          'username': user.username,
+          'password': user.password,
+          'first_name': user.firstName,
+          'last_name': user.lastName,
+          'email': user.email,
+        }),
       );
 
-      if (usernameExists) {
+      final decoded = jsonDecode(response.body) as Map<String, dynamic>;
+
+      if (response.statusCode == 200 && decoded['success'] == true) {
+        final userData = decoded['data']['user'] as Map<String, dynamic>;
         return GenericResponse<User>(
-          success: false,
-          data: null,
-          message: 'El usuario ya existe',
+          success: true,
+          data: User.fromJson(userData),
+          message: decoded['message'] ?? 'Cuenta creada correctamente',
           error: null,
         );
       }
-
-      final bool emailExists = users.any(
-        (existingUser) =>
-            existingUser.email.toLowerCase() == user.email.toLowerCase(),
-      );
-
-      if (emailExists) {
-        return GenericResponse<User>(
-          success: false,
-          data: null,
-          message: 'El correo ya está registrado',
-          error: null,
-        );
-      }
-
-      final int nextId = users.isEmpty
-          ? 1
-          : users
-                  .map((existingUser) => existingUser.id)
-                  .reduce((a, b) => a > b ? a : b) +
-              1;
-
-      final User newUser = User(
-        id: nextId,
-        username: user.username,
-        password: user.password,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        resetKey: null,
-        status: true,
-        activationKey: 'ACT$nextId',
-        birthDate: null,
-        profilePicture: null,
-        sex: null,
-        nationality: null,
-      );
-
-      users.add(newUser);
 
       return GenericResponse<User>(
-        success: true,
-        data: newUser,
-        message: 'Cuenta creada correctamente',
-        error: null,
+        success: false,
+        data: null,
+        message: decoded['message'] ?? 'No se pudo crear la cuenta',
+        error: decoded['error'],
       );
     } catch (e, stackTrace) {
       print('Error: $e');
