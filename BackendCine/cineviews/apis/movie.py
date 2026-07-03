@@ -272,7 +272,7 @@ def add_favorite():
     finally:
         session.close()
 
-    return response, status
+    return response, statusñ
 
 # =====================================================
 # LISTAR PELÍCULAS CON REVIEWS
