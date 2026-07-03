@@ -201,5 +201,6 @@ class WatchedMovie(Base):
             "id": self.id,
             "watched_date": self.watched_date.isoformat() if self.watched_date else None,
             "user_id": self.user_id,
-            "movie_id": self.movie_id
+            "movie_id": self.movie_id,
+            "movie": self.movie.to_dict() if self.movie else None
         }

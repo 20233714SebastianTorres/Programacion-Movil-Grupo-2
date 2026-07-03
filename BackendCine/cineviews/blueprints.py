@@ -9,5 +9,6 @@ blueprints = [
   api_movies,
   api_reviews,
   api_users,
+  api_watched,
   #api_actors,
 ]
