@@ -35,3 +35,20 @@ Authorization: Bearer {{token}}
 #############################################
 GET {{baseUrl}}/v1/movies/1
 Authorization: Bearer {{token}}
+
+#############################################
+# FAVORITOS - LISTAR POR USUARIO
+#############################################
+GET {{baseUrl}}/v1/favorites/1
+Authorization: Bearer {{token}}
+
+#############################################
+# FAVORITOS - AGREGAR PELÍCULA
+#############################################
+POST {{baseUrl}}/v1/favorites
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "movie_id": 1
+}

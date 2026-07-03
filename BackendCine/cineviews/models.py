@@ -190,6 +190,8 @@ class WatchedMovie(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     watched_date: Mapped[date] = mapped_column(Date)
 
+    favorite: Mapped[bool] = mapped_column(Boolean, default=False)
+
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
     movie_id: Mapped[int] = mapped_column(ForeignKey("movies.id"))
 
@@ -201,5 +203,6 @@ class WatchedMovie(Base):
             "id": self.id,
             "watched_date": self.watched_date.isoformat() if self.watched_date else None,
             "user_id": self.user_id,
-            "movie_id": self.movie_id
+            "movie_id": self.movie_id,
+            "favorite": self.favorite
         }

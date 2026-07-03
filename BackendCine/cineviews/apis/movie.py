@@ -8,7 +8,7 @@ from sqlalchemy.orm import selectinload
 from main.database import Session
 from main.middlewares import jwt_required
 
-from cineviews.models import Movie, Review
+from cineviews.models import Movie, Review, WatchedMovie
 
 api = Blueprint('cineviews_apis_movies', __name__)
 
@@ -159,6 +159,120 @@ def search_by_title():
 
     return response, status
 
+# =====================================================
+# LISTAR TODAS LAS PELÍCULAS EN FAVORITOS
+# =====================================================
+@api.route('/apis/v1/favorites/<int:user_id>', methods=['GET'])
+# @jwt_required
+def fetch_favorites(user_id):
+
+    response = None
+    status = 200
+
+    session = Session()
+
+    try:
+
+        movies = (
+            session.query(Movie)
+            .join(Movie.watched_by)
+            .filter(
+                WatchedMovie.user_id == user_id,
+                WatchedMovie.favorite == True
+            )
+            .all()
+        )
+
+        response = jsonify({
+            'message': 'Lista de películas favoritas',
+            'data': [movie.to_dict() for movie in movies],
+            'success': True,
+            'error': None
+        })
+
+    except Exception as e:
+
+        traceback.print_exc()
+
+        response = jsonify({
+            'message': 'Ocurrió un error al listar favoritos',
+            'data': None,
+            'success': False,
+            'error': str(e)
+        })
+
+        status = 500
+
+    finally:
+        session.close()
+
+    return response, status
+
+
+# =====================================================
+# AGREGAR PELÍCULA A FAVORITOS
+# =====================================================
+
+@api.route('/apis/v1/favorites', methods=['POST'])
+# @jwt_required
+def add_favorite():
+
+    response = None
+    status = 200
+
+    session = Session()
+
+    try:
+
+        data = request.json
+
+        watched = (
+            session.query(WatchedMovie)
+            .filter(
+                WatchedMovie.user_id == data["user_id"],
+                WatchedMovie.movie_id == data["movie_id"]
+            )
+            .first()
+        )
+
+        if watched is None:
+
+            return jsonify({
+                "message": "La película no ha sido vista por el usuario",
+                "data": None,
+                "success": False,
+                "error": None
+            }), 404
+
+        watched.favorite = True
+
+        session.commit()
+
+        response = jsonify({
+            "message": "Película agregada a favoritos",
+            "data": watched.to_dict(),
+            "success": True,
+            "error": None
+        })
+
+    except Exception as e:
+
+        session.rollback()
+        traceback.print_exc()
+
+        response = jsonify({
+            "message": "Ocurrió un error al agregar a favoritos",
+            "data": None,
+            "success": False,
+            "error": str(e)
+        })
+
+        status = 500
+
+    finally:
+        session.close()
+
+    return response, status
 
 # =====================================================
 # LISTAR PELÍCULAS CON REVIEWS
